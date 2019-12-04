@@ -86,7 +86,12 @@ public class HomeinfoServiceImpl implements HomeinfoService {
         return homeinfos;
     }
 
-
+    /*确定城市名条件下的模糊搜索且分页*/
+    @Override
+    public List<Homeinfo> selectAllByCityName(String description, Integer size, Integer page) {
+        List<Homeinfo> homeinfos = homeinfoDao.selectAllByCityName(description,size,page);
+        return homeinfos;
+    }
 
 
 }

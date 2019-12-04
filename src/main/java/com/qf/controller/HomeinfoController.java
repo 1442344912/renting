@@ -87,4 +87,14 @@ public class HomeinfoController {
         }
         return   homeinfoService.saveAndFlush(homeinfo);
     }
+
+    /*确定城市条件下的模糊查询及分页*/
+    @RequestMapping(value = "selectAllByCityName/{description}/{size}/{page}",method = RequestMethod.GET)
+    public Msg selectAllByCityName(@PathVariable("description")String description,@PathVariable("size")Integer size,@PathVariable("page")Integer page ){
+        List<Homeinfo> homeinfos = homeinfoService.selectAllByCityName(description, size, page);
+        Msg msg = new Msg();
+        msg.setList(homeinfos);
+        msg.setPage(page);
+        return msg;
+    }
 }

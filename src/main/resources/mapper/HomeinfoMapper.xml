@@ -22,5 +22,9 @@
        select h.picture,h.address,h.hoststyle,h.price,h.description from homeinfo h  where description like '%' || #{description} || '%' limit ?,?
     </select>
 
+    <select id="selectAllByCityName" parameterType="String" resultMap="BaseResault">
+        select h.picture,h.address,h.hoststyle,h.price,h.description from homeinfo h where cname=#{cityname} and description like '%' || #{description} || '%' limit ?,?
+    </select>
+
     <!--select h.picture,h.address,h.hoststyle,h.price,h.description from homeinfo h  where description like '%西%' limit 1,1-->
 </mapper>

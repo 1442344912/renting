@@ -20,4 +20,4 @@ qiniu:
   bucket:  1908-picture
   url: http://q1arif8n1.bkt.clouddn.com/
 server:
-  port: 8085
+  port: 8099

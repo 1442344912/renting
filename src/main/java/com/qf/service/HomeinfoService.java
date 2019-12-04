@@ -22,5 +22,8 @@ public interface HomeinfoService {
     /*模糊所搜酒店*/
     List<Homeinfo> selectAllhose(String description, Integer size, Integer page);
 
+    /* 进入城市的模糊搜索酒店*/
+    List<Homeinfo> selectAllByCityName(String description, Integer size ,Integer page);
+
 
 }
